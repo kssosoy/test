@@ -243,7 +243,7 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                <button onclick="start()" type="submit" class="submit">오늘의 추천 레시피</button>
+                <button type="submit" class="submit">오늘의 추천 레시피</button>
             </form>
         </div>
     </div>
@@ -283,6 +283,10 @@
             document.getElementById("chat").style.display = "block";
             
         }
+         document.querySelector('.submit').addEventListener('click', function (event) {
+        event.preventDefault();
+        start();
+      });
 
         const sendMessage = async () => {
             const chatInput = document.querySelector('.chat-input input');
